@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 299575775}
   - component: {fileID: 299575777}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2463,7 +2463,7 @@ GameObject:
   - component: {fileID: 406126079}
   - component: {fileID: 406126080}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3114,8 +3114,9 @@ GameObject:
   - component: {fileID: 840077532}
   - component: {fileID: 840077531}
   - component: {fileID: 840077533}
+  - component: {fileID: 840077534}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Soundtrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3132,10 +3133,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8406336091541768660, guid: 6461a48556913b4479a159b2e268b1c3, type: 2}
   m_audioClip: {fileID: 8300000, guid: 749428170bd956149a4ede7c65dbb8b6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3242,7 +3243,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2263097301873471416, guid: 6461a48556913b4479a159b2e268b1c3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ccad869fad961cf41ab8e4d1be870bc7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bec1cfb465efc7a41bd5ccbac5b6f2a2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.279
   m_Pitch: 1
@@ -3328,6 +3329,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &840077534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840077530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8301aa83b322f54488ed27014389406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tracks:
+  - {fileID: 8300000, guid: ccad869fad961cf41ab8e4d1be870bc7, type: 3}
+  - {fileID: 8300000, guid: 510c33ca580a3c24ab2f050263ad4011, type: 3}
+  - {fileID: 8300000, guid: bf8ad15327c244f4e853c393f11de03a, type: 3}
+  - {fileID: 8300000, guid: 4cb1cedef0c7ff146a3173d6e0c8f1db, type: 3}
+  - {fileID: 8300000, guid: 741a07d6afb087d4d847aafa0978801a, type: 3}
+  - {fileID: 8300000, guid: 01a46e9fcad6fa24d96f919a50d9d170, type: 3}
+  - {fileID: 8300000, guid: d0521d72fde0b514496092039cf266c4, type: 3}
+  _source: {fileID: 840077531}
 --- !u!4 &847433275 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8880890979157700243, guid: b18dcd3ee86986b469e9cfc64055704c, type: 3}
@@ -6769,6 +6791,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6323719953710832613, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1853401825}
+    - targetCorrespondingSourceObject: {fileID: 6323719953710832613, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1853401831}
   m_SourcePrefab: {fileID: 100100000, guid: a4b4a6d32bcb19248a754d6602ffc7e4, type: 3}
 --- !u!4 &1853401815 stripped
 Transform:
@@ -6835,7 +6860,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3229425108148161727, guid: 6461a48556913b4479a159b2e268b1c3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1deb201b8bf8f89479323a74e421150b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 46f5277c164ad38459f4e3f7019d6854, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6921,6 +6946,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1853401831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853401816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191a37744185e914980de0f408030b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 1853401818}
+  _stepAudio: {fileID: 1853401825}
 --- !u!4 &1881845819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1358752294138806029, guid: ac067d7d3bd8a1c4a9fb05099b5a4e06, type: 3}
