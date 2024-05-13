@@ -11,6 +11,7 @@ public class HeroAnimationController : MonoBehaviour
     [SerializeField] private HeroInputController _input;
     [SerializeField] private HeroPhysicsController _physics;
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private ParticleSystem _particles;
     
     private static readonly int IsGrounded = Animator.StringToHash("IsGrounded");
     private static readonly int AirSpeed = Animator.StringToHash("AirSpeed");
@@ -32,6 +33,7 @@ public class HeroAnimationController : MonoBehaviour
         if (_input.IsJumpPressed)
         {
             _animator.SetTrigger(Jump);
+            _particles.Play();
         }
 
     }
